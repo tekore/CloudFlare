@@ -23,7 +23,3 @@ jobs:
       - name: Terraform Apply (Main Branch Only)
         if: github.ref_name == 'main'
         run: terraform apply -auto-approve tfplan
-
-      - name: Terraform Destroy
-        if: github.ref_name == 'main'
-        run: terraform destroy -auto-approve tfplan
